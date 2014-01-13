@@ -1,0 +1,45 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="liqd.ypart_theme">
+
+    <!-- folder for static resources  -->
+    <browser:resourceDirectory
+        name="liqd.ypart_theme"
+        directory="static"
+        />
+
+    <!-- tile views -->
+    <plone:tile
+        name="liqd.ypart_theme.projekte_tile"
+        title="Projekte Teasers"
+        description=""
+        schema="..interfaces.IProjekteTileData"
+        class=".projekte_tile.ProjekteTile"
+        add_permission="cmf.ModifyPortalContent"
+        permission="zope2.View"
+        for="*"
+        layer="..interfaces.ILiqdYpart_themeLayer"
+        />
+
+    <!-- viewlet views -->
+    <browser:viewlet
+        name="liqd.ypart_tiles.projekte_viewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        template="projekte_viewlet.pt"
+        permission="zope2.View"
+        class=".projekte_viewlet.ProjekteViewlet" 
+        view="plone.app.layout.globals.interfaces.IViewView"
+        for="..interfaces.IProjekteViewletMarker"
+        />
+
+    <!-- portlet views  -->
+    <include package="plone.app.portlets" />
+
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.news.INewsPortlet"
+        template="news.pt"
+        layer="..interfaces.ILiqdYpart_themeLayer"
+        />
+
+</configure>

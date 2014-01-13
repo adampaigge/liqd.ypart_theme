@@ -1,0 +1,60 @@
+
+/* minimal decogrid for layout */
+div.row {
+    float: left;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+div.cell {
+position: relative;
+float: left;
+left: 100%;
+}
+div.position-1  { 
+    margin-left: -50% 
+}
+div.position-0  { 
+    margin-left: -100%   
+}
+div.width-1 {
+    width: 48%;
+}
+div.width-2 {
+    width: 98%;
+}
+
+/* additional cell formatting */
+.cell {
+    padding: 1em;
+}
+
+/* other stuff */
+.tile-editable {
+    position: relative;
+    outline: 2px dashed #e8e8e8;
+    min-height: 10.5em;
+    width: 100%;
+}
+
+.tile-editable:hover {
+    outline: 2px dashed #b8b8b8;
+}
+
+.tile-edit-link {
+    display: none !important;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    z-index: 500;
+}
+
+.tile-editable:hover .tile-edit-link {
+    display: block !important;
+}
+
+#projects_teaser_box .teaser_box {
+    display: block;
+    outline: 2px dashed #e8e8e8;
+}
+

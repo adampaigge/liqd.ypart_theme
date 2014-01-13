@@ -1,0 +1,3 @@
+ <div class="visualClear"><!-- --></div>
+<div tal:attributes="data-tile string:${context/absolute_url}/@@liqd.ypart_theme.projekte_tile/ypart_startpage" />
+
