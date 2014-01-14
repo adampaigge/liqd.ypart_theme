@@ -10,17 +10,18 @@
         />
 
     <!-- tile views -->
-    <plone:tile
+     <plone:tile
         name="liqd.ypart_theme.projekte_tile"
         title="Projekte Teasers"
         description=""
-        schema="..interfaces.IProjekteTileData"
+        icon="++resource++collective.cover/tile-richtext.png"
+        schema=".projekte_tile.IProjekteTileData"
         class=".projekte_tile.ProjekteTile"
-        add_permission="cmf.ModifyPortalContent"
         permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
         for="*"
         layer="..interfaces.ILiqdYpart_themeLayer"
-        />
+      />
 
     <!-- viewlet views -->
     <browser:viewlet

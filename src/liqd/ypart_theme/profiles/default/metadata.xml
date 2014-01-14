@@ -4,5 +4,6 @@
     <dependencies>
         <dependency>profile-plone.app.tiles:default</dependency>
         <dependency>profile-plone.app.blocks:default</dependency>
+        <dependency>profile-collective.cover:default</dependency>
     </dependencies>
 </metadata>

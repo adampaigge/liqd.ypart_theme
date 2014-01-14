@@ -7,13 +7,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="cell width-1 position-0">
+        <div class="cell width-8 position-0">
             <a id="project_teaser_left" class="teaser_box" href="#">
                 <h3 class="teaser_title" tal:content="view/teaserl_title"></h3>
                 <p class="teaser_description" tal:content="view/teaserl_description"></p>
             </a>
         </div>
-        <div class="cell width-1 position-1">
+        <div class="cell width-8 position-8">
             <a id="project_teaser_right" class="teaser_box" href="#">
                 <h3 class="teaser_title" tal:content="view/teaserr_title"></h3>
                 <p class="teaser_description" tal:content="view/teaserr_description"></p>

@@ -42,6 +42,7 @@ setup(name='liqd.ypart_theme',
           'plone.app.textfield',
           'plone.app.tiles',
           'plone.app.blocks',
+          'collective.cover',
           # -*- Extra requirements: -*-
       ],
       extras_require={'test': ['plone.app.testing']},
