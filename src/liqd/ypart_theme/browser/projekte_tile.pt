@@ -2,7 +2,7 @@
 <body>
 <div id="projects_teaser_box">
     <div class="row">
-        <div class="cell width-2 position-0">
+        <div class="cell width-16 position-0">
             <p class="teaser_description" tal:content="view/description"></p>
         </div>
     </div>
