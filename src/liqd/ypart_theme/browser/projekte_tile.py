@@ -43,6 +43,8 @@ class ProjekteTile(PersistentCoverTile):
         self.description = self.data.get('description', u'')
         self.teaserl_description = self.data.get('teaserl_description', u'')
         self.teaserl_title = self.data.get('teaserl_title', u'')
+        self.teaserl_link = self.data.get('teaserl_link', u'')
         self.teaserr_description = self.data.get('teaserr_description', u'')
         self.teaserr_title = self.data.get('teaserr_title', u'')
+        self.teaserr_link = self.data.get('teaserr_link', u'')
         return self.template()
