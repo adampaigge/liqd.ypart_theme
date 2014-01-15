@@ -25,7 +25,7 @@
          tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
 
         <span class=portletItemHeader>
-            <span class="documentAuthor" tal:content="obj/author_name | obj/Creator" />
+            <span class="documentAuthor" tal:content="python: obj.author_name or  obj.Creator" />
             <span>schreibt</span>
         </span>
 
