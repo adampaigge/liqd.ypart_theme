@@ -3,6 +3,8 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="liqd.ypart_theme">
 
+    <include package="plone.app.portlets" />
+
     <!-- folder for static resources  -->
     <browser:resourceDirectory
         name="liqd.ypart_theme"
@@ -10,7 +12,7 @@
         />
 
     <!-- tile views -->
-     <plone:tile
+    <plone:tile
         name="liqd.ypart_theme.projekte_tile"
         title="Projekte Teasers"
         description=""
@@ -21,7 +23,7 @@
         add_permission="cmf.ModifyPortalContent"
         for="*"
         layer="..interfaces.ILiqdYpart_themeLayer"
-      />
+        />
 
     <!-- viewlet views -->
     <browser:viewlet
@@ -35,11 +37,33 @@
         />
 
     <!-- portlet views  -->
-    <include package="plone.app.portlets" />
-
     <plone:portletRenderer
         portlet="plone.app.portlets.portlets.news.INewsPortlet"
         template="news.pt"
+        layer="..interfaces.ILiqdYpart_themeLayer"
+        />
+
+    <!-- browser view -->
+    <browser:page
+        name="folder_summary_view"
+        for="plone.app.contenttypes.interfaces.IFolder"
+        layer="..interfaces.ILiqdYpart_themeLayer"
+        template="folder_summary_view.pt"
+        permission="zope2.View"
+        />
+    <browser:page
+        name="folder_summary_view"
+        for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
+        layer="..interfaces.ILiqdYpart_themeLayer"
+        template="folder_summary_view.pt"
+        permission="zope2.View"
+        />
+    <browser:page
+        name="summary_view"
+        permission="zope2.View"
+        for="plone.app.contenttypes.behaviors.collection.ISyndicatableCollection"
+        class="plone.app.contenttypes.browser.collection.CollectionView"
+        template="summary_view.pt"
         layer="..interfaces.ILiqdYpart_themeLayer"
         />
 

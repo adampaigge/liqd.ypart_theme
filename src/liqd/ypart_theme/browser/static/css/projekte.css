@@ -1,4 +1,10 @@
 
+/*summary view */
+#content .tileImageContainer p.discreet {
+    display: none;
+}
+
+
 /* minimal decogrid for layout */
 div.row {
     float: left;
