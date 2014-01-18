@@ -16,21 +16,19 @@ class IProjekteTileData(IPersistentCoverTile):
                        default=u'',
                        required=False)
     teaserl_title = TextLine(title=u'Titel linker Teaser',
-                             default=u'youthpart national',
+                             default=u'',
                              required=False)
     teaserl_description = Text(title=u'Einleitungstext linker Teaser',
-                               default=u"Hier findest du alle Projekt auf"
-                               u" nationaler Ebene.",
+                               default=u"",
                                required=False)
 
     teaserl_link = URI(title=u"Link rechter Teaser",
                        required=True)
     teaserr_title = TextLine(title=u'Titel rechter Teaser',
-                             default=u'youthpart lokal',
+                             default=u'',
                              required=False)
     teaserr_description = Text(title=u'Einleitungstext rechter Teaser',
-                               default=u"Hier findest du alle Projekt auf"
-                               u" nationaler Ebene.",
+                               default=u"",
                                required=False)
     teaserr_link = URI(title=u"Link rechter Teaser",
                        required=True,
